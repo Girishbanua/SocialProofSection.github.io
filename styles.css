@@ -1,0 +1,180 @@
+:root {
+    --Very--Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft--Pink: hsl(333, 80%, 67%);
+    --Dark--Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+    --border-red: 2px solid red;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan',sans-serif;
+}
+html {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+}
+body {
+    margin: 5em auto;
+    width: 85%;
+    min-height: 100vh;
+    background: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+}
+.heading {    
+    text-align: center;
+}
+.heading h1 {
+    color: var(--Very--Dark-Magenta);
+    line-height: 0.8;
+    font-size: 38px;
+}
+.sub-heading {
+    text-align: center;
+    margin: 25px 15px;    
+}
+.sub-heading p {
+    color: var(--Dark--Grayish-Magenta);
+    font-size: 15px;
+    font-weight: 500;
+}
+/*--------- // RATING BOX //------------*/
+.ratings-div {
+    background-color: var(--Light-Grayish-Magenta);
+    margin: 15px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    padding: 15px;    
+    gap: 5px;  
+}
+.ratings-div p {
+    color: var(--Very--Dark-Magenta);
+    font-size: 17px;
+    font-weight: 700;
+} 
+.rate-box-3 {
+    margin-bottom: 50px;
+}
+/*--------- // Verified Buyer BOX //------------*/
+.verified-buyers {
+    background-color: var(--Very--Dark-Magenta);
+    color: white;
+    margin: 15px auto;
+    padding: 35px;
+    border-radius: 10px;
+}
+.verified-buyers .image-and-name {
+    display: flex;
+    align-items: center;    
+    margin-bottom: 25px;
+}
+.verified-buyers .image-and-name img {
+    border-radius: 50%;
+    width: 50%;    
+}
+.verified-buyers .image-and-name .name {
+    margin-left: -20px;
+}
+.verified-buyers .image-and-name .name p {
+    color: var(--Soft--Pink);
+    font-size: 15px;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  /*---------//Desktop View//-----*/
+
+  @media screen and (min-width: 1260px) {
+    body {
+        width: 80%;
+        background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg") ;
+        background-position: left top, right bottom;        
+    }
+    .main-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;       
+    }
+    .heading h1, .sub-heading p{
+        text-align: start;        
+    }
+    .heading h1 {
+        font-size: 4rem;
+        line-height: 0.9;
+    }
+    .sub-heading p {
+        font-size: 1.4em;
+        font-weight: 400;
+        margin-left: -15px;        
+    }
+    .rating-box {
+        margin: 0;
+        display: flex;
+        flex-direction: column;       
+    }
+    .ratings-div p {
+        font-size: 15px;
+    }
+    .ratings-div {
+        display: flex;
+        flex-direction: row;                                
+        margin-bottom: 0;
+        width: 75%;
+    }
+    .rating-stars {
+        margin: 0 15px;
+    }
+    .rate-box-1 {
+        margin-left: 0px;
+    }
+    .rate-box-2 {
+        margin-left: 50px;
+    }
+    .rate-box-3 {
+        margin-right: 25px;                       
+    }
+    .buyers {
+        display: flex;
+        grid-column: 1/3;
+        flex-direction: row;
+    }
+    .verified-buyers {
+        margin-right: 25px;         
+        font-size: 15px;  
+        padding: 25px;  
+        height: 90%;    
+        width: fit-content;
+        
+    }
+    .verified-buyers .image-and-name .name h4 {
+        font-size: 17px;
+    }
+    .verified-buyers .image-and-name .name p {
+        font-size: 17px;
+    }
+    .verified-buyers>p {
+        font-size: 17px;
+        margin-right: 20px;
+    }    
+    .buyer-2 {        
+        margin-top: 30px;
+    }
+    .buyer-3 {        
+        margin-top: 50px;
+    }
+    .attribution {
+        margin-bottom: 0;
+    }
+  }
